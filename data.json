@@ -1,50 +1,50 @@
 [
   {
     "id": "matan",
-    "type": "Коллоквиум",
+    "type": "РљРѕР»Р»РѕРєРІРёСѓРј",
     "date": "2026-11-10T08:50:00",
     "active": true,
     "theme": "purple",
-    "title": "Математический анализ",
+    "title": "РњР°С‚РµРјР°С‚РёС‡РµСЃРєРёР№ Р°РЅР°Р»РёР·",
     "tgLink": "https://t.me/c/4359191970/32",
     "details": [
-      { "label": "Дата", "value": "10 Ноября", "sub": "ММ-1: 8:50 | ММ-2: 9:50 | ММ-3: 10:40" },
-      { "label": "Формат", "value": "4 вопроса (30 мин)" },
-      { "label": "Структура", "value": "Без доказательств" },
-      { "label": "Для зачета", "value": "10 баллов (11 БРС)", "class": "text-emerald-400", "borderNone": true }
+      { "label": "Р”Р°С‚Р°", "value": "10 РќРѕСЏР±СЂСЏ", "sub": "РњРњ-1: 8:50 | РњРњ-2: 9:50 | РњРњ-3: 10:40" },
+      { "label": "Р¤РѕСЂРјР°С‚", "value": "4 РІРѕРїСЂРѕСЃР° (30 РјРёРЅ)" },
+      { "label": "РЎС‚СЂСѓРєС‚СѓСЂР°", "value": "Р‘РµР· РґРѕРєР°Р·Р°С‚РµР»СЊСЃС‚РІ" },
+      { "label": "Р”Р»СЏ Р·Р°С‡РµС‚Р°", "value": "10 Р±Р°Р»Р»РѕРІ (11 Р‘Р РЎ)", "class": "text-emerald-400", "borderNone": true }
     ],
-    "rules": "<strong class='text-white block mb-1'>Строгие правила:</strong> Опоздание = осечка. Выходить нельзя. За телефон — удаление.",
+    "rules": "<strong class='text-white block mb-1'>РЎС‚СЂРѕРіРёРµ РїСЂР°РІРёР»Р°:</strong> РћРїРѕР·РґР°РЅРёРµ = РѕСЃРµС‡РєР°. Р’С‹С…РѕРґРёС‚СЊ РЅРµР»СЊР·СЏ. Р—Р° С‚РµР»РµС„РѕРЅ вЂ” СѓРґР°Р»РµРЅРёРµ.",
     "files": [
-      { "name": "Шпора", "href": "materials/matan/matan-shpora.pdf" },
-      { "name": "Шпора +", "href": "materials/matan/matan-shpora-plus.pdf" },
-      { "name": "Конспект", "href": "materials/matan/matan-konspekt.pdf" },
-      { "name": "Письм. конспект", "href": "materials/matan/matan-konspekt-pismennyi.pdf" },
-      { "name": "Методичка", "href": "materials/matan/matan-metodichka.pdf", "recommended": true },
-      { "name": "Темы", "href": "materials/matan/matan-temy.pdf" }
+      { "name": "РЁРїРѕСЂР°", "href": "materials/matan/matan-shpora.pdf" },
+      { "name": "РЁРїРѕСЂР° +", "href": "materials/matan/matan-shpora-plus.pdf" },
+      { "name": "РљРѕРЅСЃРїРµРєС‚", "href": "materials/matan/matan-konspekt.pdf" },
+      { "name": "РџРёСЃСЊРј. РєРѕРЅСЃРїРµРєС‚", "href": "materials/matan/matan-konspekt-pismennyi.pdf" },
+      { "name": "РњРµС‚РѕРґРёС‡РєР°", "href": "materials/matan/matan-metodichka.pdf", "recommended": true },
+      { "name": "РўРµРјС‹", "href": "materials/matan/matan-temy.pdf" }
     ]
   },
   {
     "id": "algem",
-    "type": "Коллоквиум",
+    "type": "РљРѕР»Р»РѕРєРІРёСѓРј",
     "date": "2026-11-13T10:00:00",
     "active": true,
     "theme": "cyan",
-    "title": "Алгебра и Геометрия",
+    "title": "РђР»РіРµР±СЂР° Рё Р“РµРѕРјРµС‚СЂРёСЏ",
     "tgLink": "https://t.me/c/4359191970/39",
     "details": [
-      { "label": "Дата", "value": "13 Ноября (Пятница)" },
-      { "label": "Формат", "value": "Письменно-устный", "class": "text-cyan-300" },
-      { "label": "Структура", "value": "5 вопросов (2 с док-вом)" },
-      { "label": "Максимум", "value": "20 баллов", "class": "text-emerald-400", "borderNone": true }
+      { "label": "Р”Р°С‚Р°", "value": "13 РќРѕСЏР±СЂСЏ (РџСЏС‚РЅРёС†Р°)" },
+      { "label": "Р¤РѕСЂРјР°С‚", "value": "РџРёСЃСЊРјРµРЅРЅРѕ-СѓСЃС‚РЅС‹Р№", "class": "text-cyan-300" },
+      { "label": "РЎС‚СЂСѓРєС‚СѓСЂР°", "value": "5 РІРѕРїСЂРѕСЃРѕРІ (2 СЃ РґРѕРє-РІРѕРј)" },
+      { "label": "РњР°РєСЃРёРјСѓРј", "value": "20 Р±Р°Р»Р»РѕРІ", "class": "text-emerald-400", "borderNone": true }
     ],
-    "rules": "<strong class='text-white block mb-1'>Аудитории:</strong> Часть 1 (ММ-1 + 12 чел. ММ-2) — ауд. 311. Вторая часть — уточняется.",
+    "rules": "<strong class='text-white block mb-1'>РђСѓРґРёС‚РѕСЂРёРё:</strong> Р§Р°СЃС‚СЊ 1 (РњРњ-1 + 12 С‡РµР». РњРњ-2) вЂ” Р°СѓРґ. 311. Р’С‚РѕСЂР°СЏ С‡Р°СЃС‚СЊ вЂ” СѓС‚РѕС‡РЅСЏРµС‚СЃСЏ.",
     "files": [
-      { "name": "Шпора", "href": "materials/algem/algem-shpora.pdf" },
-      { "name": "Шпора +", "href": "materials/algem/algem-shpora-plus.pdf", "recommended": true },
-      { "name": "Конспект", "href": "materials/algem/algem-konspekt.pdf" },
-      { "name": "Письм. конспект", "href": "materials/algem/algem-konspekt-pismennyi.pdf" },
-      { "name": "Методичка", "href": "materials/algem/algem-metodichka.pdf" },
-      { "name": "Темы", "href": "materials/algem/algem-temy.pdf" }
+      { "name": "РЁРїРѕСЂР°", "href": "materials/algem/algem-shpora.pdf" },
+      { "name": "РЁРїРѕСЂР° +", "href": "materials/algem/algem-shpora-plus.pdf", "recommended": true },
+      { "name": "РљРѕРЅСЃРїРµРєС‚", "href": "materials/algem/algem-konspekt.pdf" },
+      { "name": "РџРёСЃСЊРј. РєРѕРЅСЃРїРµРєС‚", "href": "materials/algem/algem-konspekt-pismennyi.pdf" },
+      { "name": "РњРµС‚РѕРґРёС‡РєР°", "href": "materials/algem/algem-metodichka.pdf" },
+      { "name": "РўРµРјС‹", "href": "materials/algem/algem-temy.pdf" }
     ]
   }
 ]
