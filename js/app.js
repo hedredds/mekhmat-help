@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <div class="info-block relative z-10 text-[11px] sm:text-xs">${ev.rules}</div>
             <div class="action-row relative z-10">
-                <a href="${ev.tgLink}" target="_blank" rel="noopener noreferrer" class="tg-post-btn">РїРѕРґСЂРѕР±РЅРµРµ РІ С‚Рі</a>
+                <a href="${ev.tgLink}" target="_blank" rel="noopener noreferrer" class="tg-post-btn">подробнее в тг</a>
                 <button class="like-btn ${isLiked}" data-id="${ev.id}">
                     ${ICONS.heart}
                     <span id="like-count-${ev.id}" class="like-count">...</span>
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <div class="grid-buttons relative z-10">
                 ${ev.files.map(f => `
-                    <a href="${f.href}" target="_blank" rel="noopener noreferrer" class="btn-file ${btnClass} ${f.recommended ? recClass : ''}" aria-label="РЎРєР°С‡Р°С‚СЊ ${f.name}">
+                    <a href="${f.href}" target="_blank" rel="noopener noreferrer" class="btn-file ${btnClass} ${f.recommended ? recClass : ''}" aria-label="Скачать ${f.name}">
                         <span class="${iconColor}">${ICONS.file}</span>
                         ${f.name}
                     </a>
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             if (activeEvents.length === 0) {
-                container.innerHTML = `<div class="col-span-full text-center py-12 text-gray-500">Р‘Р»РёР¶Р°Р№С€РёС… СЃРѕР±С‹С‚РёР№ РїРѕРєР° РЅРµС‚. РћС‚РґС‹С…Р°Р№!</div>`;
+                container.innerHTML = `<div class="col-span-full text-center py-12 text-gray-500">Ближайших событий пока нет. Отдыхай!</div>`;
                 return;
             }
 
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             fetchInitialLikes(activeEvents);
         } catch (error) {
-            container.innerHTML = `<div class="col-span-full text-center py-12 text-red-500">РћС€РёР±РєР° Р·Р°РіСЂСѓР·РєРё СЂР°СЃРїРёСЃР°РЅРёСЏ. РџСЂРѕРІРµСЂСЊС‚Рµ data.json</div>`;
+            container.innerHTML = `<div class="col-span-full text-center py-12 text-red-500">Ошибка загрузки расписания. Проверьте data.json</div>`;
         }
     }
 
