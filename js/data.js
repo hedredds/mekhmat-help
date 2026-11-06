@@ -1,4 +1,4 @@
-[
+const EVENT_DATA = [
   {
     "id": "matan",
     "type": "Коллоквиум",
@@ -47,4 +47,4 @@
       { "name": "Темы", "href": "materials/algem/algem-temy.pdf" }
     ]
   }
-]
+];

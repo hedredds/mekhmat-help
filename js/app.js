@@ -43,12 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
         await Promise.allSettled(promises);
     }
 
-    async function loadData() {
-        const response = await fetch('data.json');
-        if (!response.ok) throw new Error('Failed to fetch config');
-        return response.json();
-    }
-
     function createCard(ev) {
         const isMatan = ev.theme === 'purple';
         const bgGlow = isMatan ? 'bg-purple-500' : 'bg-cyan-500';
@@ -102,11 +96,10 @@ document.addEventListener('DOMContentLoaded', () => {
         return card;
     }
 
-    async function init() {
+    function init() {
         try {
-            const events = await loadData();
             const now = new Date();
-            const activeEvents = events.filter(e => {
+            const activeEvents = EVENT_DATA.filter(e => {
                 const eventDate = new Date(e.date);
                 eventDate.setHours(23, 59, 59, 999); 
                 return e.active !== false && eventDate >= now;
@@ -123,7 +116,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             fetchInitialLikes(activeEvents);
         } catch (error) {
-            container.innerHTML = `<div class="col-span-full text-center py-12 text-red-500">Ошибка загрузки расписания. Проверьте data.json</div>`;
+            console.error(error);
+            container.innerHTML = `<div class="col-span-full text-center py-12 text-red-500">Системная ошибка рендера.</div>`;
         }
     }
 
