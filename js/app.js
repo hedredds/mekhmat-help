@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const ICONS = {
         matan: `<svg aria-hidden="true" class="w-6 h-6 sm:w-7 sm:h-7 text-purple-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>`,
-        algem: `<svg aria-hidden="true" class="w-6 h-6 sm:w-7 sm:h-7 text-orange-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"></path></svg>`,
+        algem: `<svg aria-hidden="true" class="w-6 h-6 sm:w-7 sm:h-7 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"></path></svg>`,
         file: `<svg aria-hidden="true" class="w-4 h-4 opacity-70 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>`,
         heart: `<svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>`
     };
@@ -45,12 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function createCard(ev) {
         const isMatan = ev.theme === 'purple';
-        const bgGlow = isMatan ? 'bg-purple-500' : 'bg-orange-500';
-        const bgIcon = isMatan ? 'bg-purple-500/20' : 'bg-orange-500/20';
-        const badgeClass = isMatan ? 'bg-purple-500/20 text-purple-300' : 'bg-orange-500/20 text-orange-300';
+        const bgGlow = isMatan ? 'bg-purple-500' : 'bg-cyan-500';
+        const bgIcon = isMatan ? 'bg-purple-500/20' : 'bg-cyan-500/20';
+        const badgeClass = isMatan ? 'bg-purple-500/20 text-purple-300' : 'bg-cyan-500/20 text-cyan-300';
         const btnClass = isMatan ? 'btn-file-matan' : 'btn-file-algem';
         const recClass = isMatan ? 'recommended-matan' : 'recommended-algem';
-        const iconColor = isMatan ? 'text-purple-400' : 'text-orange-400';
+        const iconColor = isMatan ? 'text-purple-400' : 'text-cyan-400';
         const isLiked = localStorage.getItem(`mekhmat_liked_${ev.id}`) ? 'liked' : '';
 
         const card = document.createElement('div');
