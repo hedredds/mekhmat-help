@@ -52,7 +52,7 @@ const EVENT_DATA = [
     "type": "Контрольная",
     "date": "2026-11-16T08:00:00",
     "active": true,
-    "theme": "orange",
+    "theme": "purple",
     "title": "Математический анализ",
     "tgLink": "https://t.me/c/4359191970/95",
     "details": [
