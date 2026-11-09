@@ -46,5 +46,24 @@ const EVENT_DATA = [
       { "name": "Методичка", "href": "materials/algem/algem-metodichka.pdf" },
       { "name": "Темы", "href": "materials/algem/algem-temy.pdf" }
     ]
+  },
+  {
+    "id": "matan-kr",
+    "type": "Контрольная",
+    "date": "2026-11-16T08:00:00",
+    "active": true,
+    "theme": "orange",
+    "title": "Математический анализ",
+    "tgLink": "https://t.me/c/4359191970/95",
+    "details": [
+      { "label": "Дата", "value": "16 Ноября" },
+      { "label": "Формат", "value": "8 заданий" },
+      { "label": "Развесовка", "value": "2+1+2+2+2+2+2+2" },
+      { "label": "Максимум", "value": "15 баллов", "class": "text-emerald-400", "borderNone": true }
+    ],
+    "rules": "<strong class='text-white block mb-1'>Ожидайте обновления:</strong> Скоро будут добавлены новые файлы для подготовки к контрольной, помимо демо-варианта.",
+    "files": [
+      { "name": "Демо-вариант", "href": "materials/matan/matan_kr_demo.pdf", "recommended": true }
+    ]
   }
 ];
