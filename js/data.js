@@ -32,7 +32,7 @@ const EVENT_DATA = [
     "title": "Алгебра и Геометрия",
     "tgLink": "https://t.me/c/4359191970/39",
     "details": [
-      { "label": "Дата", "value": "13 Ноября (Пятница)" },
+      { "label": "Дата", "value": "13 Ноября" },
       { "label": "Формат", "value": "Письменно-устный", "class": "text-cyan-300" },
       { "label": "Структура", "value": "5 вопросов (2 с док-вом)" },
       { "label": "Максимум", "value": "20 баллов", "class": "text-emerald-400", "borderNone": true }
