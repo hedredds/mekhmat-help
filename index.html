@@ -1,29 +1,152 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="space">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Файлы к коллоквиумам | Mekhmat</title>
-    <meta name="description" content="Шпоры, конспекты и методички для подготовки к коллоквиумам.">
+    <meta name="description" content="База файлов для подготовки">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%23a855f7'/><text x='50' y='72' text-anchor='middle' font-size='64' font-family='sans-serif' font-weight='bold' fill='white'>M</text></svg>">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/data.js"></script>
     <script defer src="js/app.js"></script>
 </head>
 <body class="antialiased selection:bg-purple-500 selection:text-white">
-    <h1 class="sr-only">Расписание и файлы к коллоквиумам</h1>
+    <h1 class="sr-only">Расписание и файлы</h1>
 
-    <main id="app-container"></main>
+    <header class="top-nav-wrapper" id="site-header">
+        <div class="top-nav glass-nav">
+            <div class="flex items-center justify-between w-full">
+                <a href="#" id="logo-home" class="flex items-center gap-2.5 text-white font-bold tracking-tight text-base sm:text-lg">
+                    <span class="w-7 h-7 rounded-lg bg-purple-600 flex items-center justify-center text-sm font-extrabold shadow-lg shadow-purple-500/30">M</span>
+                    <span>Mekhmat<span class="text-purple-400 font-normal">.help</span></span>
+                </a>
+                <button id="burger-btn" class="burger-btn" type="button" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <div class="filter-bar custom-scroll" id="quick-filters">
+                <button class="filter-chip active" data-view="feed" data-filter="active">Актуальные</button>
+                <button class="filter-chip" data-view="schedule">Расписание</button>
+                <button class="filter-chip" data-view="feed" data-filter="matan">Матан</button>
+                <button class="filter-chip" data-view="feed" data-filter="algem">Алгем</button>
+                <button class="filter-chip" data-view="feed" data-filter="proga">Прога</button>
+                <button class="filter-chip" data-view="feed" data-filter="archive">Архив</button>
+            </div>
+        </div>
+    </header>
+
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+    <aside id="sidebar" class="sidebar-drawer flex flex-col">
+        <div class="sidebar-header flex-shrink-0">
+            <span class="text-xs font-bold uppercase tracking-widest text-gray-400">Меню</span>
+            <button id="sidebar-close" class="text-gray-400 hover:text-white p-1" aria-label="Закрыть">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav custom-scroll">
+            <button class="sidebar-link active" data-view="feed" data-filter="active">
+                <svg class="w-4 h-4 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                Актуальные работы
+            </button>
+            <button class="sidebar-link" data-view="schedule">
+                <svg class="w-4 h-4 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                Расписание
+            </button>
+            
+            <div class="sidebar-divider">Предметы</div>
+            <button class="sidebar-link" data-view="feed" data-filter="matan">
+                <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                Математический анализ
+            </button>
+            <button class="sidebar-link" data-view="feed" data-filter="algem">
+                <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"></path></svg>
+                Алгебра и геометрия
+            </button>
+            <button class="sidebar-link" data-view="feed" data-filter="proga">
+                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                Программирование
+            </button>
+            
+            <div class="sidebar-divider">Дополнительно</div>
+            <button class="sidebar-link" data-view="feed" data-filter="archive">
+                <svg class="w-4 h-4 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
+                Архив прошедших работ
+            </button>
+            <button class="sidebar-link" data-view="about">
+                <svg class="w-4 h-4 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                О проекте / Контакты
+            </button>
+        </nav>
+
+        <div class="sidebar-footer flex-shrink-0">
+            <div class="theme-grid">
+                <button class="theme-btn active" data-set-theme="space">Space</button>
+                <button class="theme-btn" data-set-theme="midnight">Midnight</button>
+                <button class="theme-btn" data-set-theme="forest">Cyber</button>
+                <button class="theme-btn" data-set-theme="light">Light</button>
+            </div>
+        </div>
+    </aside>
+
+    <main id="app-container" class="view-anim"></main>
+
+    <section id="schedule-view" class="view-container view-anim hidden">
+        <div class="glass relative mb-4">
+            <div class="card-header relative z-10 flex items-center justify-between !mb-0">
+                <div class="flex items-center gap-3">
+                    <div class="p-2.5 sm:p-3 bg-purple-500/20 rounded-2xl flex-shrink-0">
+                        <svg class="w-6 h-6 sm:w-7 sm:h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <div class="title-text">Расписание работ</div>
+                </div>
+                <span class="badge bg-purple-500/20 text-purple-300">Ноябрь 2026</span>
+            </div>
+        </div>
+
+        <div id="schedule-timeline" class="flex flex-col gap-3"></div>
+    </section>
+
+    <section id="about-view" class="view-container view-anim hidden">
+        <div class="glass relative">
+            <div class="card-header relative z-10">
+                <div class="p-2.5 sm:p-3 bg-cyan-500/20 rounded-2xl flex-shrink-0">
+                    <svg class="w-6 h-6 sm:w-7 sm:h-7 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <div class="card-title-wrapper">
+                    <div class="title-text">О проекте / Контакты</div>
+                    <div><span class="badge bg-cyan-500/20 text-cyan-300">Инфо</span></div>
+                </div>
+            </div>
+
+            <div class="info-list relative z-10 !mb-0">
+                <div class="info-row">
+                    <span class="info-label">Канал</span>
+                    <span class="info-value"><a href="https://t.me/+r4aFXNhfIe02Y2Ji" target="_blank" rel="noopener noreferrer" class="text-purple-400 hover:underline">Перейти в канал ресурса</a></span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Чат</span>
+                    <span class="info-value"><a href="https://t.me/+HqQ_vg0OIJpmMDQ6" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:underline">Открыть Telegram</a></span>
+                </div>
+                <div class="info-row border-b-0 pb-0">
+                    <span class="info-label">Почта</span>
+                    <span class="info-value"><a href="mailto:hedredy.ml@gmail.com" class="text-emerald-400 hover:underline">hedredy.ml@gmail.com</a></span>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <div class="text-center pb-8 relative z-10 mt-auto">
-        <p class="text-gray-400 text-[10px] sm:text-[11px] font-semibold tracking-widest uppercase">создано нереализованным потенциалом</p>
+        <p class="text-gray-500 text-[10px] sm:text-[11px] font-semibold tracking-widest uppercase">создано нереализованным потенциалом</p>
     </div>
 
-    <a href="https://t.me/+HqQ_vg0OIJpmMDQ6" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 text-gray-400 hover:text-white transition-colors duration-300" aria-label="Перейти в Telegram">
+    <a href="https://t.me/+HqQ_vg0OIJpmMDQ6" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 text-gray-500 hover:text-white transition-colors duration-300" aria-label="Перейти в Telegram">
         <svg aria-hidden="true" class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
     </a>
 </body>
