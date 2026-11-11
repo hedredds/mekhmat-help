@@ -62,10 +62,10 @@ const EVENT_DATA = [
     "rules": "<strong class='block mb-1'>Аудитории:</strong> Часть 1 (ММ-1 полностью + 12 чел. ММ-2) - ауд. 311. Часть 2 (остальные ММ-2 + ММ-3) - уточняется.",
     "files": [
       { "name": "Шпора", "href": "https://drive.google.com/file/d/1ZfgmlAmq2q1ckQuEoSxVJIM0tzJU7RWd/view?usp=drive_link" },
-      { "name": "Шпора +", "href": "https://drive.google.com/file/d/10F2yVXlHkg7AQug6k2v713xYzXYYfx7P/view?usp=drive_link", "recommended": true },
+      { "name": "Шпора +", "href": "https://drive.google.com/file/d/1nxM7bHjIJvpwCqjX3txOsPVXCdPkjffv/view?usp=drivesdk" },
       { "name": "Конспект", "href": "https://drive.google.com/file/d/1aAX1u6KIUDjG6W8ZatpbrG-FKxwJ4s8F/view?usp=drive_link" },
       { "name": "Письм. конспект", "href": "https://drive.google.com/file/d/1zY_EBnrpxiS1ZTVMLHFOHjRHnKNQC5Ua/view?usp=drive_link" },
-      { "name": "Методичка", "href": "https://drive.google.com/file/d/16e4KOxJrPdyCd8YhBcRTzagfzgXNKqe6/view?usp=drive_link" },
+      { "name": "Методичка", "href": "https://drive.google.com/file/d/1zyNttCjO56URttmQECTKlAbdr2ZUxkVg/view?usp=drivesdk", "recommended": true },
       { "name": "Темы", "href": "https://drive.google.com/file/d/1JFiZ9jR6kfGsHfHMFIVET3kmAT5jOoEE/view?usp=drive_link" }
     ]
   },
